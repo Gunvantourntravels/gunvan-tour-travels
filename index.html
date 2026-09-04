@@ -529,11 +529,20 @@
       }
 
       .logo-box{
-        width:48px;
-        height:48px;
-        font-size:20px;
-      }
+    width:60px;
+    height:60px;
+    flex-shrink:0;
+    overflow:hidden;
+    border-radius:12px;
+    background:white;
+}
 
+.logo-box img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    display:block;
+}
       section{
         padding:45px 0;
       }
@@ -547,7 +556,9 @@
   <div class="container nav">
 
     <div class="brand">
-      <div class="logo-box">GV</div>
+      <div class="logo-box">
+  <img src="gunvan-logo.png" alt="GunVan Tour & Travels Logo">
+</div>
 
       <div class="brand-text">
         <h1>GunVan Tour & Travels</h1>
