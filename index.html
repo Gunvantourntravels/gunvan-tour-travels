@@ -4,199 +4,538 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>GunVan Tour & Travels | Haridwar, Uttarakhand</title>
+  <title>GunVan Tour & Travels | Taxi, Char Dham & Airport Transfer</title>
 
   <meta name="description"
-        content="GunVan Tour & Travels - Char Dham Yatra, Taxi Booking, Airport Transfer, Outstation Taxi, Tour Packages and Hotel Booking. Call 9639397032.">
+        content="GunVan Tour & Travels, Haridwar. Book Char Dham Yatra, taxi, airport transfer, outstation trips, tour packages and hotel assistance. Call or WhatsApp 9639397032.">
+
+  <meta name="keywords"
+        content="Haridwar Taxi, Char Dham Taxi, Char Dham Yatra, Delhi Airport Taxi, Uttarakhand Taxi, Outstation Taxi, GunVan Tour Travels">
+
+  <meta name="author" content="GunVan Tour & Travels">
 
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
     }
 
-    body {
-      font-family: Arial, sans-serif;
-      background: #fffaf2;
-      color: #222;
-      line-height: 1.6;
+    html{
+      scroll-behavior:smooth;
     }
 
-    header {
-      background: linear-gradient(135deg, #ff7a00, #ffb000);
-      color: white;
-      text-align: center;
-      padding: 45px 20px;
+    body{
+      font-family:Arial, Helvetica, sans-serif;
+      background:#f8faf9;
+      color:#1f2937;
+      line-height:1.6;
     }
 
-    .logo {
-      font-size: 44px;
-      margin-bottom: 5px;
+    a{
+      text-decoration:none;
     }
 
-    header h1 {
-      font-size: 34px;
-      margin-bottom: 5px;
+    img{
+      max-width:100%;
     }
 
-    header h2 {
-      font-size: 18px;
-      font-weight: normal;
+    .container{
+      max-width:1150px;
+      margin:auto;
+      padding:0 18px;
     }
 
-    .tagline {
-      margin-top: 15px;
-      font-size: 18px;
+    header{
+      background:#ffffff;
+      box-shadow:0 2px 12px rgba(0,0,0,0.08);
+      position:sticky;
+      top:0;
+      z-index:999;
     }
 
-    .hero {
-      padding: 45px 20px;
-      text-align: center;
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:12px 0;
+      gap:20px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+
+    .logo-box{
+      width:58px;
+      height:58px;
+      border-radius:50%;
+      background:linear-gradient(135deg,#00695c,#ff7a00);
+      color:white;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:bold;
+      font-size:24px;
+    }
+
+    .brand-text h1{
+      font-size:22px;
+      color:#00695c;
+    }
+
+    .brand-text span{
+      font-size:12px;
+      color:#666;
+    }
+
+    nav a{
+      margin-left:15px;
+      color:#234;
+      font-size:14px;
+      font-weight:600;
+    }
+
+    nav a:hover{
+      color:#ff7a00;
+    }
+
+    .hero{
       background:
-        linear-gradient(rgba(0,75,70,.75), rgba(0,75,70,.82)),
-        linear-gradient(135deg, #009688, #00695c);
-      color: white;
+        linear-gradient(rgba(0,75,70,.78),rgba(0,75,70,.82)),
+        linear-gradient(135deg,#00695c,#009688);
+      color:white;
+      padding:85px 20px;
+      text-align:center;
     }
 
-    .hero h2 {
-      font-size: 30px;
-      margin-bottom: 10px;
+    .hero h2{
+      font-size:42px;
+      line-height:1.2;
+      margin-bottom:15px;
     }
 
-    .hero p {
-      max-width: 700px;
-      margin: auto;
-      font-size: 17px;
+    .hero p{
+      max-width:760px;
+      margin:auto;
+      font-size:18px;
     }
 
-    .buttons {
-      margin-top: 25px;
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      flex-wrap: wrap;
+    .hero-badges{
+      margin-top:18px;
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:10px;
     }
 
-    .btn {
-      display: inline-block;
-      padding: 13px 23px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: bold;
-      color: white;
+    .badge{
+      background:rgba(255,255,255,.14);
+      padding:8px 14px;
+      border-radius:20px;
+      font-size:14px;
     }
 
-    .call {
-      background: #1565c0;
+    .hero-buttons{
+      margin-top:28px;
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:12px;
     }
 
-    .whatsapp {
-      background: #25D366;
+    .btn{
+      display:inline-block;
+      padding:13px 22px;
+      border-radius:30px;
+      font-weight:bold;
+      border:none;
+      cursor:pointer;
+      font-size:15px;
     }
 
-    section {
-      padding: 40px 18px;
-      max-width: 1050px;
-      margin: auto;
+    .btn-call{
+      background:#1565c0;
+      color:#fff;
     }
 
-    .title {
-      text-align: center;
-      color: #e65100;
-      font-size: 28px;
-      margin-bottom: 25px;
+    .btn-wa{
+      background:#25D366;
+      color:#fff;
     }
 
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-      gap: 18px;
+    .btn-orange{
+      background:#ff7a00;
+      color:#fff;
     }
 
-    .card {
-      background: white;
-      padding: 24px 15px;
-      text-align: center;
-      border-radius: 15px;
-      box-shadow: 0 4px 15px rgba(0,0,0,.10);
+    section{
+      padding:55px 0;
     }
 
-    .card .icon {
-      font-size: 35px;
+    .section-title{
+      text-align:center;
+      margin-bottom:32px;
     }
 
-    .card h3 {
-      margin: 10px 0 5px;
-      color: #00695c;
+    .section-title h2{
+      color:#00695c;
+      font-size:30px;
+      margin-bottom:8px;
     }
 
-    .chardham {
-      background: #fff3e0;
-      border-radius: 20px;
-      text-align: center;
-      margin-top: 15px;
+    .section-title p{
+      color:#667085;
+      max-width:720px;
+      margin:auto;
     }
 
-    .dhams {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 20px;
+    .booking-wrap{
+      margin-top:-45px;
+      position:relative;
+      z-index:5;
     }
 
-    .dham {
-      background: #ff8f00;
-      color: white;
-      padding: 10px 16px;
-      border-radius: 20px;
-      font-weight: bold;
+    .booking-card{
+      background:white;
+      border-radius:18px;
+      box-shadow:0 12px 35px rgba(0,0,0,.13);
+      padding:28px;
     }
 
-    .about {
-      text-align: center;
+    .booking-card h2{
+      text-align:center;
+      color:#00695c;
+      margin-bottom:22px;
     }
 
-    .owner {
-      margin-top: 18px;
-      font-size: 20px;
-      font-weight: bold;
-      color: #00695c;
+    .form-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:15px;
     }
 
-    .contact {
-      background: #00695c;
-      color: white;
-      max-width: none;
-      text-align: center;
+    .form-group{
+      display:flex;
+      flex-direction:column;
     }
 
-    .contact h2 {
-      font-size: 28px;
+    .form-group.full{
+      grid-column:1/-1;
     }
 
-    .phone {
-      font-size: 27px;
-      font-weight: bold;
-      margin: 12px 0;
+    label{
+      font-weight:bold;
+      margin-bottom:6px;
+      color:#344054;
+      font-size:14px;
     }
 
-    footer {
-      text-align: center;
-      background: #222;
-      color: #ddd;
-      padding: 20px 10px;
-      font-size: 14px;
+    input, select, textarea{
+      width:100%;
+      padding:12px;
+      border:1px solid #d0d5dd;
+      border-radius:10px;
+      font-size:15px;
+      background:white;
     }
 
-    @media(max-width:600px) {
-      header h1 {
-        font-size: 28px;
+    textarea{
+      min-height:90px;
+      resize:vertical;
+    }
+
+    .airport-fields{
+      display:none;
+      grid-column:1/-1;
+      background:#f4fbfa;
+      padding:15px;
+      border-radius:12px;
+      border:1px solid #b2dfdb;
+    }
+
+    .airport-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:12px;
+    }
+
+    .submit-box{
+      text-align:center;
+      margin-top:20px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:20px;
+    }
+
+    .card{
+      background:white;
+      border-radius:16px;
+      padding:24px;
+      box-shadow:0 5px 18px rgba(0,0,0,.08);
+      text-align:center;
+    }
+
+    .card .icon{
+      font-size:38px;
+      margin-bottom:8px;
+    }
+
+    .card h3{
+      color:#00695c;
+      margin-bottom:6px;
+    }
+
+    .chardham{
+      background:#fff5e9;
+    }
+
+    .dham-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:15px;
+    }
+
+    .dham-card{
+      background:#fff;
+      border-radius:15px;
+      padding:24px 10px;
+      text-align:center;
+      border-top:4px solid #ff7a00;
+      box-shadow:0 4px 15px rgba(0,0,0,.07);
+    }
+
+    .dham-card h3{
+      color:#e65100;
+    }
+
+    .fleet-grid{
+      display:grid;
+      grid-template-columns:repeat(5,1fr);
+      gap:14px;
+    }
+
+    .fleet{
+      background:white;
+      border-radius:14px;
+      padding:20px 12px;
+      text-align:center;
+      box-shadow:0 4px 14px rgba(0,0,0,.07);
+    }
+
+    .fleet .car{
+      font-size:38px;
+    }
+
+    .airport-section{
+      background:linear-gradient(135deg,#eaf7ff,#f4fbfa);
+    }
+
+    .airport-box{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      align-items:center;
+      gap:30px;
+    }
+
+    .airport-visual{
+      background:white;
+      border-radius:20px;
+      padding:35px;
+      text-align:center;
+      font-size:80px;
+      box-shadow:0 6px 20px rgba(0,0,0,.08);
+    }
+
+    .why-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:15px;
+    }
+
+    .why{
+      background:white;
+      padding:22px 14px;
+      border-radius:14px;
+      text-align:center;
+      box-shadow:0 4px 15px rgba(0,0,0,.07);
+    }
+
+    .why .icon{
+      font-size:34px;
+    }
+
+    .service-area{
+      background:#00695c;
+      color:white;
+    }
+
+    .area-list{
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:20px;
+    }
+
+    .area{
+      background:rgba(255,255,255,.14);
+      padding:9px 14px;
+      border-radius:20px;
+    }
+
+    .about-contact{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:25px;
+    }
+
+    .info-box{
+      background:white;
+      border-radius:16px;
+      padding:25px;
+      box-shadow:0 4px 16px rgba(0,0,0,.07);
+    }
+
+    .info-box h3{
+      color:#00695c;
+      margin-bottom:10px;
+    }
+
+    .policies{
+      background:#f1f5f4;
+    }
+
+    details{
+      background:white;
+      border-radius:12px;
+      padding:15px 18px;
+      margin-bottom:12px;
+      box-shadow:0 3px 10px rgba(0,0,0,.05);
+    }
+
+    summary{
+      font-weight:bold;
+      color:#00695c;
+      cursor:pointer;
+    }
+
+    details p{
+      margin-top:10px;
+      color:#555;
+    }
+
+    footer{
+      background:#17202a;
+      color:#ddd;
+      text-align:center;
+      padding:25px 15px 90px;
+    }
+
+    .footer-links{
+      margin-top:10px;
+    }
+
+    .footer-links a{
+      color:#ffb26b;
+      margin:0 8px;
+    }
+
+    .sticky-actions{
+      position:fixed;
+      bottom:14px;
+      left:50%;
+      transform:translateX(-50%);
+      z-index:9999;
+      display:flex;
+      gap:10px;
+      background:rgba(255,255,255,.95);
+      padding:8px;
+      border-radius:35px;
+      box-shadow:0 5px 20px rgba(0,0,0,.2);
+    }
+
+    .sticky-actions a{
+      padding:11px 17px;
+      border-radius:25px;
+      color:white;
+      font-weight:bold;
+      white-space:nowrap;
+    }
+
+    .sticky-call{
+      background:#1565c0;
+    }
+
+    .sticky-wa{
+      background:#25D366;
+    }
+
+    @media(max-width:900px){
+      nav{
+        display:none;
       }
 
-      .hero h2 {
-        font-size: 25px;
+      .grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .fleet-grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .why-grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .dham-grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .airport-box,
+      .about-contact{
+        grid-template-columns:1fr;
+      }
+
+      .airport-grid{
+        grid-template-columns:1fr;
+      }
+    }
+
+    @media(max-width:650px){
+      .hero{
+        padding:65px 18px;
+      }
+
+      .hero h2{
+        font-size:31px;
+      }
+
+      .form-grid,
+      .grid,
+      .fleet-grid,
+      .why-grid,
+      .dham-grid{
+        grid-template-columns:1fr;
+      }
+
+      .brand-text h1{
+        font-size:18px;
+      }
+
+      .logo-box{
+        width:48px;
+        height:48px;
+        font-size:20px;
+      }
+
+      section{
+        padding:45px 0;
       }
     }
   </style>
@@ -205,142 +544,737 @@
 <body>
 
 <header>
-  <div class="logo">🚕 🏔️ 🛕</div>
-  <h1>GunVan Tour & Travels</h1>
-  <h2>Haridwar • Uttarakhand • India</h2>
-  <p class="tagline">
-    Your Trusted Travel Partner for Uttarakhand, North India & All India
-  </p>
+  <div class="container nav">
+
+    <div class="brand">
+      <div class="logo-box">GV</div>
+
+      <div class="brand-text">
+        <h1>GunVan Tour & Travels</h1>
+        <span>Haridwar • Uttarakhand • India</span>
+      </div>
+    </div>
+
+    <nav>
+      <a href="#booking">Book</a>
+      <a href="#services">Services</a>
+      <a href="#chardham">Char Dham</a>
+      <a href="#fleet">Fleet</a>
+      <a href="#about">About</a>
+      <a href="#policies">Policies</a>
+    </nav>
+
+  </div>
 </header>
 
-<div class="hero">
-  <h2>🙏 Explore Devbhoomi With GunVan</h2>
 
-  <p>
-    Comfortable journeys, reliable taxi services and memorable tours.
-    From Char Dham Yatra to airport transfers and outstation trips,
-    GunVan Tour & Travels is ready for your journey.
-  </p>
+<section class="hero">
 
-  <div class="buttons">
-    <a class="btn call" href="tel:+919639397032">
-      📞 Call Now
-    </a>
+  <div class="container">
 
-    <a class="btn whatsapp"
-       href="https://wa.me/919639397032?text=Hello%20GunVan%20Tour%20%26%20Travels%2C%20I%20want%20to%20make%20a%20booking.">
-      💬 WhatsApp Booking
-    </a>
+    <h2>Explore Devbhoomi With GunVan</h2>
+
+    <p>
+      Reliable taxi booking, Char Dham Yatra, airport transfers,
+      outstation journeys and customized travel services from Haridwar.
+    </p>
+
+    <div class="hero-badges">
+      <span class="badge">🛕 Char Dham Yatra</span>
+      <span class="badge">🚕 Taxi Booking</span>
+      <span class="badge">✈️ Airport Transfer</span>
+      <span class="badge">🛣️ Outstation</span>
+    </div>
+
+    <div class="hero-buttons">
+      <a href="tel:+919639397032" class="btn btn-call">📞 Call Now</a>
+
+      <a href="https://wa.me/919639397032"
+         class="btn btn-wa">
+        💬 WhatsApp
+      </a>
+
+      <a href="#booking" class="btn btn-orange">
+        Book Your Journey
+      </a>
+    </div>
+
   </div>
+
+</section>
+
+
+<div class="container booking-wrap" id="booking">
+
+  <div class="booking-card">
+
+    <h2>Quick Booking Enquiry</h2>
+
+    <form id="bookingForm">
+
+      <div class="form-grid">
+
+        <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" id="name" required>
+        </div>
+
+        <div class="form-group">
+          <label>Mobile Number</label>
+          <input type="tel" id="mobile" required>
+        </div>
+
+        <div class="form-group">
+          <label>Pickup Location</label>
+          <input type="text" id="pickup" required>
+        </div>
+
+        <div class="form-group">
+          <label>Drop Location</label>
+          <input type="text" id="drop" required>
+        </div>
+
+        <div class="form-group">
+          <label>Journey Date</label>
+          <input type="date" id="date" required>
+        </div>
+
+        <div class="form-group">
+          <label>Pickup Time</label>
+          <input type="time" id="time">
+        </div>
+
+        <div class="form-group">
+          <label>Passengers</label>
+          <input type="number" id="passengers" min="1" value="1">
+        </div>
+
+        <div class="form-group">
+          <label>Trip Type</label>
+
+          <select id="tripType" onchange="toggleAirportFields()">
+            <option value="One Way">One Way</option>
+            <option value="Round Trip">Round Trip</option>
+            <option value="Char Dham Yatra">Char Dham Yatra</option>
+            <option value="Airport Pickup">Airport Pickup</option>
+            <option value="Airport Drop">Airport Drop</option>
+            <option value="Tour Package">Tour Package</option>
+          </select>
+        </div>
+
+        <div class="airport-fields" id="airportFields">
+
+          <div class="airport-grid">
+
+            <div class="form-group">
+              <label>Flight Number</label>
+              <input type="text" id="flightNumber">
+            </div>
+
+            <div class="form-group">
+              <label>Flight Date</label>
+              <input type="date" id="flightDate">
+            </div>
+
+            <div class="form-group">
+              <label>Arrival Airport</label>
+              <input type="text" id="arrivalAirport"
+                     placeholder="Example: Delhi Airport">
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="form-group full">
+          <label>Additional Requirement</label>
+
+          <textarea id="message"
+                    placeholder="Vehicle preference, hotel requirement, return date or any special request"></textarea>
+        </div>
+
+      </div>
+
+      <div class="submit-box">
+
+        <button type="submit" class="btn btn-wa">
+          Send Booking on WhatsApp
+        </button>
+
+      </div>
+
+    </form>
+
+  </div>
+
 </div>
 
+
+<section id="services">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <h2>Our Services</h2>
+
+      <p>
+        Travel solutions for pilgrimage, leisure,
+        business and airport journeys.
+      </p>
+
+    </div>
+
+    <div class="grid">
+
+      <div class="card">
+        <div class="icon">🛕</div>
+        <h3>Char Dham Yatra</h3>
+        <p>
+          Taxi and travel assistance for Yamunotri,
+          Gangotri, Kedarnath and Badrinath.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🚕</div>
+        <h3>Taxi Booking</h3>
+        <p>
+          One-way and round-trip taxi booking
+          for local and intercity travel.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">✈️</div>
+        <h3>Airport Transfer</h3>
+        <p>
+          Convenient airport pickup and drop
+          including Delhi Airport routes.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🛣️</div>
+        <h3>Outstation Taxi</h3>
+        <p>
+          Comfortable city-to-city travel across
+          Uttarakhand, North India and beyond.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🏔️</div>
+        <h3>Tour Packages</h3>
+        <p>
+          Customized pilgrimage and holiday
+          travel packages.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🏨</div>
+        <h3>Hotel Assistance</h3>
+        <p>
+          Hotel booking assistance for selected
+          travel destinations.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="chardham" id="chardham">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <h2>🙏 Char Dham Yatra</h2>
+
+      <p>
+        Plan your sacred Uttarakhand journey
+        with comfortable road travel support.
+      </p>
+
+    </div>
+
+    <div class="dham-grid">
+
+      <div class="dham-card">
+        <h3>Yamunotri</h3>
+        <p>Begin your sacred Himalayan journey.</p>
+      </div>
+
+      <div class="dham-card">
+        <h3>Gangotri</h3>
+        <p>Travel to the holy origin region of Maa Ganga.</p>
+      </div>
+
+      <div class="dham-card">
+        <h3>Kedarnath</h3>
+        <p>Road travel assistance for your Kedarnath pilgrimage.</p>
+      </div>
+
+      <div class="dham-card">
+        <h3>Badrinath</h3>
+        <p>Comfortable journey towards Badrinath Dham.</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="airport-section">
+
+  <div class="container airport-box">
+
+    <div>
+
+      <div class="section-title" style="text-align:left">
+
+        <h2>Airport Transfer Service</h2>
+
+        <p>
+          Book pickup and drop services for airport journeys.
+          Airport pickup enquiries can include your flight number,
+          flight date and arrival airport.
+        </p>
+
+      </div>
+
+      <a href="#booking" class="btn btn-orange">
+        Book Airport Transfer
+      </a>
+
+    </div>
+
+    <div class="airport-visual">
+      ✈️ 🚕
+    </div>
+
+  </div>
+
+</section>
+
+
+<section id="fleet">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <h2>Our Fleet</h2>
+
+      <p>
+        Vehicle options for couples, families,
+        groups and longer journeys.
+      </p>
+
+    </div>
+
+    <div class="fleet-grid">
+
+      <div class="fleet">
+        <div class="car">🚘</div>
+        <h3>Swift Dzire</h3>
+        <p>Sedan</p>
+      </div>
+
+      <div class="fleet">
+        <div class="car">🚙</div>
+        <h3>Ertiga</h3>
+        <p>Family MPV</p>
+      </div>
+
+      <div class="fleet">
+        <div class="car">🚙</div>
+        <h3>Kia Carens</h3>
+        <p>Premium MPV</p>
+      </div>
+
+      <div class="fleet">
+        <div class="car">🚙</div>
+        <h3>Creta</h3>
+        <p>SUV</p>
+      </div>
+
+      <div class="fleet">
+        <div class="car">🚌</div>
+        <h3>Tempo Traveller</h3>
+        <p>Group Travel</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
 <section>
-  <h2 class="title">Our Services</h2>
 
-  <div class="services">
+  <div class="container">
 
-    <div class="card">
-      <div class="icon">🛕</div>
-      <h3>Char Dham Yatra</h3>
-      <p>Comfortable pilgrimage travel across Uttarakhand.</p>
+    <div class="section-title">
+
+      <h2>Why Choose GunVan?</h2>
+
     </div>
 
-    <div class="card">
-      <div class="icon">🚖</div>
-      <h3>Taxi Booking</h3>
-      <p>One-way and round-trip taxi booking services.</p>
+    <div class="why-grid">
+
+      <div class="why">
+        <div class="icon">✅</div>
+        <h3>Reliable Service</h3>
+      </div>
+
+      <div class="why">
+        <div class="icon">🚗</div>
+        <h3>Comfortable Vehicles</h3>
+      </div>
+
+      <div class="why">
+        <div class="icon">👨‍✈️</div>
+        <h3>Experienced Drivers</h3>
+      </div>
+
+      <div class="why">
+        <div class="icon">📱</div>
+        <h3>Easy Booking Support</h3>
+      </div>
+
     </div>
-
-    <div class="card">
-      <div class="icon">✈️</div>
-      <h3>Airport Transfer</h3>
-      <p>Airport pickup and drop services including Delhi Airport.</p>
-    </div>
-
-    <div class="card">
-      <div class="icon">🛣️</div>
-      <h3>Outstation Booking</h3>
-      <p>Travel from city to city across North India and beyond.</p>
-    </div>
-
-    <div class="card">
-      <div class="icon">🏔️</div>
-      <h3>Tour Packages</h3>
-      <p>Uttarakhand and North India holiday and pilgrimage packages.</p>
-    </div>
-
-    <div class="card">
-      <div class="icon">🏨</div>
-      <h3>Hotel Booking</h3>
-      <p>Hotel assistance for your travel destinations.</p>
-    </div>
-
-  </div>
-</section>
-
-<section class="chardham">
-  <h2 class="title">🙏 Char Dham Yatra</h2>
-
-  <p>
-    Plan your sacred journey through the four holy Dhams of Uttarakhand.
-  </p>
-
-  <div class="dhams">
-    <span class="dham">Yamunotri</span>
-    <span class="dham">Gangotri</span>
-    <span class="dham">Kedarnath</span>
-    <span class="dham">Badrinath</span>
-  </div>
-</section>
-
-<section class="about">
-  <h2 class="title">About GunVan</h2>
-
-  <p>
-    GunVan Tour & Travels provides taxi, tour and travel services
-    with a focus on convenient booking, dependable travel and
-    customer-friendly service.
-  </p>
-
-  <p class="owner">
-    Vineet Kumar
-  </p>
-
-  <p>
-    GunVan Tour & Travels
-  </p>
-</section>
-
-<section class="contact">
-
-  <h2>Ready For Your Journey?</h2>
-
-  <p>
-    Contact GunVan Tour & Travels for booking and travel enquiries.
-  </p>
-
-  <div class="phone">
-    📞 +91 9639397032
-  </div>
-
-  <div class="buttons">
-
-    <a class="btn call" href="tel:+919639397032">
-      Call GunVan
-    </a>
-
-    <a class="btn whatsapp"
-       href="https://wa.me/919639397032?text=Hello%20GunVan%20Tour%20%26%20Travels%2C%20I%20want%20travel%20details.">
-      WhatsApp Us
-    </a>
 
   </div>
 
 </section>
+
+
+<section class="service-area">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <h2 style="color:white">Our Travel Coverage</h2>
+
+      <p style="color:#d8efec">
+        Uttarakhand is our primary service area,
+        with North India and All India booking support.
+      </p>
+
+    </div>
+
+    <div class="area-list">
+      <span class="area">Haridwar</span>
+      <span class="area">Dehradun</span>
+      <span class="area">Rishikesh</span>
+      <span class="area">Delhi</span>
+      <span class="area">Delhi Airport</span>
+      <span class="area">Mussoorie</span>
+      <span class="area">Nainital</span>
+      <span class="area">Char Dham</span>
+      <span class="area">North India</span>
+      <span class="area">All India Booking</span>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section id="about">
+
+  <div class="container about-contact">
+
+    <div class="info-box">
+
+      <h3>About GunVan Tour & Travels</h3>
+
+      <p>
+        GunVan Tour & Travels provides taxi,
+        pilgrimage, airport transfer,
+        outstation and tour services
+        with a focus on convenient booking,
+        dependable travel and customer-friendly support.
+      </p>
+
+      <p style="margin-top:15px">
+        <strong>Vineet Kumar</strong><br>
+        GunVan Tour & Travels
+      </p>
+
+    </div>
+
+    <div class="info-box">
+
+      <h3>Contact & Booking</h3>
+
+      <p>
+        📍 Haridwar, Uttarakhand, India
+      </p>
+
+      <p style="margin-top:8px">
+        📞 +91 9639397032
+      </p>
+
+      <div style="margin-top:18px">
+
+        <a href="tel:+919639397032"
+           class="btn btn-call">
+          Call GunVan
+        </a>
+
+        <a href="https://wa.me/919639397032"
+           class="btn btn-wa">
+          WhatsApp
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="policies" id="policies">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <h2>Booking & Travel Policies</h2>
+
+      <p>
+        These basic policies help customers
+        understand the booking process.
+      </p>
+
+    </div>
+
+    <details>
+
+      <summary>Privacy Policy</summary>
+
+      <p>
+        Customer information submitted through this website,
+        phone or WhatsApp is used only to respond to travel
+        enquiries, bookings and related service communication.
+        GunVan Tour & Travels does not intend to sell personal
+        booking information to third parties.
+      </p>
+
+    </details>
+
+
+    <details>
+
+      <summary>Booking Terms</summary>
+
+      <p>
+        Booking confirmation depends on vehicle availability,
+        route, travel date and applicable advance payment.
+        Final fare, inclusions and exclusions should be confirmed
+        before payment.
+      </p>
+
+    </details>
+
+
+    <details>
+
+      <summary>Cancellation & Refund Policy</summary>
+
+      <p>
+        Cancellation and refund eligibility may depend on the
+        booking type, travel date, vehicle arrangement, hotel
+        or third-party charges and cancellation timing.
+        Applicable cancellation terms should be confirmed
+        at the time of booking.
+      </p>
+
+    </details>
+
+
+    <details>
+
+      <summary>Airport Pickup Policy</summary>
+
+      <p>
+        Customers may be asked to provide flight number,
+        flight date and arrival airport for airport pickup.
+        Flight delays, early arrival, cancellation or diversion
+        may require pickup timing changes or revised arrangements.
+      </p>
+
+    </details>
+
+  </div>
+
+</section>
+
 
 <footer>
-  © 2026 GunVan Tour & Travels • Haridwar, Uttarakhand
+
+  <strong>GunVan Tour & Travels</strong>
+
+  <p>
+    Haridwar • Uttarakhand • India
+  </p>
+
+  <p style="margin-top:7px">
+    © 2026 GunVan Tour & Travels. All rights reserved.
+  </p>
+
+  <div class="footer-links">
+    <a href="#booking">Book Now</a>
+    <a href="#policies">Policies</a>
+    <a href="tel:+919639397032">Contact</a>
+  </div>
+
 </footer>
+
+
+<div class="sticky-actions">
+
+  <a href="tel:+919639397032"
+     class="sticky-call">
+    📞 Call
+  </a>
+
+  <a href="https://wa.me/919639397032"
+     class="sticky-wa">
+    💬 WhatsApp
+  </a>
+
+</div>
+
+
+<script>
+
+function toggleAirportFields(){
+
+  const tripType =
+    document.getElementById("tripType").value;
+
+  const airportFields =
+    document.getElementById("airportFields");
+
+  if(
+    tripType === "Airport Pickup" ||
+    tripType === "Airport Drop"
+  ){
+    airportFields.style.display = "block";
+  }
+  else{
+    airportFields.style.display = "none";
+  }
+}
+
+
+document.getElementById("bookingForm")
+.addEventListener("submit", function(event){
+
+  event.preventDefault();
+
+  const name =
+    document.getElementById("name").value;
+
+  const mobile =
+    document.getElementById("mobile").value;
+
+  const pickup =
+    document.getElementById("pickup").value;
+
+  const drop =
+    document.getElementById("drop").value;
+
+  const date =
+    document.getElementById("date").value;
+
+  const time =
+    document.getElementById("time").value;
+
+  const passengers =
+    document.getElementById("passengers").value;
+
+  const tripType =
+    document.getElementById("tripType").value;
+
+  const flightNumber =
+    document.getElementById("flightNumber").value;
+
+  const flightDate =
+    document.getElementById("flightDate").value;
+
+  const arrivalAirport =
+    document.getElementById("arrivalAirport").value;
+
+  const extra =
+    document.getElementById("message").value;
+
+
+  let message =
+`Hello GunVan Tour & Travels,
+
+I want to make a booking enquiry.
+
+Name: ${name}
+Mobile: ${mobile}
+Pickup: ${pickup}
+Drop: ${drop}
+Journey Date: ${date}
+Pickup Time: ${time}
+Passengers: ${passengers}
+Trip Type: ${tripType}`;
+
+
+  if(
+    tripType === "Airport Pickup" ||
+    tripType === "Airport Drop"
+  ){
+
+    message +=
+`
+
+Flight Number: ${flightNumber}
+Flight Date: ${flightDate}
+Airport: ${arrivalAirport}`;
+
+  }
+
+
+  if(extra){
+
+    message +=
+`
+
+Additional Requirement:
+${extra}`;
+
+  }
+
+
+  const whatsappURL =
+    "https://wa.me/919639397032?text="
+    + encodeURIComponent(message);
+
+
+  window.open(whatsappURL, "_blank");
+
+});
+
+</script>
 
 </body>
 </html>
