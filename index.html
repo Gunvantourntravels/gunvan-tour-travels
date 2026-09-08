@@ -15,573 +15,195 @@
   <meta name="author" content="GunVan Tour & Travels">
 
   <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
+    :root{
+      --green:#00695c;
+      --green2:#00897b;
+      --orange:#ff7a00;
+      --blue:#1565c0;
+      --ink:#17324d;
+      --muted:#667085;
+      --paper:#ffffff;
+      --soft:#f5faf9;
+      --shadow:0 16px 40px rgba(16,24,40,.14);
+      --shadow-soft:0 8px 24px rgba(16,24,40,.10);
+      --radius:22px;
     }
 
-    html{
-      scroll-behavior:smooth;
-    }
-
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
     body{
-      font-family:Arial, Helvetica, sans-serif;
-      background:#f8faf9;
+      font-family:Arial,Helvetica,sans-serif;
       color:#1f2937;
-      line-height:1.6;
+      line-height:1.65;
+      background:
+        radial-gradient(circle at 10% 10%, rgba(0,137,123,.10), transparent 26%),
+        radial-gradient(circle at 90% 20%, rgba(255,122,0,.10), transparent 24%),
+        #f7fbfa;
     }
-
-    a{
-      text-decoration:none;
-    }
-
-    img{
-      max-width:100%;
-    }
-
-    .container{
-      max-width:1150px;
-      margin:auto;
-      padding:0 18px;
-    }
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;display:block}
+    .container{max-width:1180px;margin:auto;padding:0 20px}
 
     header{
-      background:#ffffff;
-      box-shadow:0 2px 12px rgba(0,0,0,0.08);
-      position:sticky;
-      top:0;
-      z-index:999;
+      background:rgba(255,255,255,.94);
+      backdrop-filter:blur(14px);
+      box-shadow:0 2px 18px rgba(0,0,0,.08);
+      position:sticky;top:0;z-index:999;
     }
-
-    .nav{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      padding:12px 0;
-      gap:20px;
-    }
-
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:10px;
-    }
-
-    .logo-box{
-      width:58px;
-      height:58px;
-      border-radius:50%;
-      background:linear-gradient(135deg,#00695c,#ff7a00);
-      color:white;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-weight:bold;
-      font-size:24px;
-    }
-
-    .brand-text h1{
-      font-size:22px;
-      color:#00695c;
-    }
-
-    .brand-text span{
-      font-size:12px;
-      color:#666;
-    }
-
-    nav a{
-      margin-left:15px;
-      color:#234;
-      font-size:14px;
-      font-weight:600;
-    }
-
-    nav a:hover{
-      color:#ff7a00;
-    }
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:10px 0;gap:20px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo-box{width:64px;height:64px;flex-shrink:0;border-radius:16px;overflow:hidden;background:#fff;box-shadow:0 5px 18px rgba(0,0,0,.08)}
+    .logo-box img{width:100%;height:100%;object-fit:contain}
+    .brand-text h1{font-size:24px;color:var(--green);line-height:1.1}
+    .brand-text span{font-size:12px;color:#667085}
+    nav{display:flex;align-items:center;gap:18px}
+    nav a{color:#20354a;font-size:14px;font-weight:700;position:relative}
+    nav a:after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--orange);transition:.25s}
+    nav a:hover{color:var(--green)}
+    nav a:hover:after{width:100%}
 
     .hero{
-      background:
-        linear-gradient(rgba(0,75,70,.78),rgba(0,75,70,.82)),
-        linear-gradient(135deg,#00695c,#009688);
-      color:white;
-      padding:85px 20px;
-      text-align:center;
-    }
-
-    .hero h2{
-      font-size:42px;
-      line-height:1.2;
-      margin-bottom:15px;
-    }
-
-    .hero p{
-      max-width:760px;
-      margin:auto;
-      font-size:18px;
-    }
-
-    .hero-badges{
-      margin-top:18px;
-      display:flex;
-      justify-content:center;
-      flex-wrap:wrap;
-      gap:10px;
-    }
-
-    .badge{
-      background:rgba(255,255,255,.14);
-      padding:8px 14px;
-      border-radius:20px;
-      font-size:14px;
-    }
-
-    .hero-buttons{
-      margin-top:28px;
-      display:flex;
-      justify-content:center;
-      flex-wrap:wrap;
-      gap:12px;
-    }
-
-    .btn{
-      display:inline-block;
-      padding:13px 22px;
-      border-radius:30px;
-      font-weight:bold;
-      border:none;
-      cursor:pointer;
-      font-size:15px;
-    }
-
-    .btn-call{
-      background:#1565c0;
-      color:#fff;
-    }
-
-    .btn-wa{
-      background:#25D366;
-      color:#fff;
-    }
-
-    .btn-orange{
-      background:#ff7a00;
-      color:#fff;
-    }
-
-    section{
-      padding:55px 0;
-    }
-
-    .section-title{
-      text-align:center;
-      margin-bottom:32px;
-    }
-
-    .section-title h2{
-      color:#00695c;
-      font-size:30px;
-      margin-bottom:8px;
-    }
-
-    .section-title p{
-      color:#667085;
-      max-width:720px;
-      margin:auto;
-    }
-
-    .booking-wrap{
-      margin-top:-45px;
       position:relative;
-      z-index:5;
-    }
-
-    .booking-card{
-      background:white;
-      border-radius:18px;
-      box-shadow:0 12px 35px rgba(0,0,0,.13);
-      padding:28px;
-    }
-
-    .booking-card h2{
-      text-align:center;
-      color:#00695c;
-      margin-bottom:22px;
-    }
-
-    .form-grid{
-      display:grid;
-      grid-template-columns:repeat(2,1fr);
-      gap:15px;
-    }
-
-    .form-group{
+      min-height:560px;
       display:flex;
-      flex-direction:column;
-    }
-
-    .form-group.full{
-      grid-column:1/-1;
-    }
-
-    label{
-      font-weight:bold;
-      margin-bottom:6px;
-      color:#344054;
-      font-size:14px;
-    }
-
-    input, select, textarea{
-      width:100%;
-      padding:12px;
-      border:1px solid #d0d5dd;
-      border-radius:10px;
-      font-size:15px;
-      background:white;
-    }
-
-    textarea{
-      min-height:90px;
-      resize:vertical;
-    }
-
-    .airport-fields{
-      display:none;
-      grid-column:1/-1;
-      background:#f4fbfa;
-      padding:15px;
-      border-radius:12px;
-      border:1px solid #b2dfdb;
-    }
-
-    .airport-grid{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:12px;
-    }
-
-    .submit-box{
-      text-align:center;
-      margin-top:20px;
-    }
-
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:20px;
-    }
-
-    .card{
-      background:white;
-      border-radius:16px;
-      padding:24px;
-      box-shadow:0 5px 18px rgba(0,0,0,.08);
-      text-align:center;
-    }
-
-    .card .icon{
-      font-size:38px;
-      margin-bottom:8px;
-    }
-
-    .card h3{
-      color:#00695c;
-      margin-bottom:6px;
-    }
-
-    .chardham{
-      background:#fff5e9;
-    }
-
-    .dham-grid{
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:15px;
-    }
-
-    .dham-card{
-      background:#fff;
-      border-radius:15px;
-      padding:24px 10px;
-      text-align:center;
-      border-top:4px solid #ff7a00;
-      box-shadow:0 4px 15px rgba(0,0,0,.07);
-    }
-.dham-image{
-  width:100%;
-  height:180px;
-  object-fit:cover;
-  border-radius:12px;
-  margin-bottom:14px;
-  display:block;
-}
-
-    
-    .dham-card h3{
-      color:#e65100;
-    }
-
-    .fleet-banner{
-  width:100%;
-  max-width:1200px;
-  margin:0 auto 25px;
-}
-
-.fleet-banner img{
-  width:100%;
-  height:auto;
-  display:block;
-  border-radius:16px;
-  box-shadow:0 4px 18px rgba(0,0,0,.10);
-}
-    
-    .fleet-grid{
-      display:grid;
-      grid-template-columns:repeat(5,1fr);
-      gap:14px;
-    }
-
-    .fleet{
-      background:white;
-      border-radius:14px;
-      padding:20px 12px;
-      text-align:center;
-      box-shadow:0 4px 14px rgba(0,0,0,.07);
-    }
-
-    .fleet .car{
-      font-size:38px;
-    }
-
-    .airport-section{
-      background:linear-gradient(135deg,#eaf7ff,#f4fbfa);
-    }
-
-    .airport-box{
-      display:grid;
-      grid-template-columns:1fr 1fr;
       align-items:center;
-      gap:30px;
-    }
-
-    .airport-visual{
-      background:white;
-      border-radius:20px;
-      padding:35px;
+      color:#fff;
       text-align:center;
-      font-size:80px;
-      box-shadow:0 6px 20px rgba(0,0,0,.08);
+      overflow:hidden;
+      background:
+        linear-gradient(90deg,rgba(0,45,50,.82),rgba(0,90,90,.50)),
+        url('images/kedarnath.jpg') center/cover no-repeat;
     }
+    .hero:before{
+      content:"";position:absolute;inset:0;
+      background:
+        radial-gradient(circle at 18% 20%,rgba(255,255,255,.18),transparent 22%),
+        linear-gradient(to top,rgba(0,0,0,.18),transparent 40%);
+      pointer-events:none;
+    }
+    .hero .container{position:relative;z-index:2}
+    .hero h2{font-size:54px;line-height:1.08;margin-bottom:16px;text-shadow:0 3px 18px rgba(0,0,0,.35)}
+    .hero p{max-width:850px;margin:auto;font-size:20px;text-shadow:0 2px 10px rgba(0,0,0,.28)}
+    .hero-buttons{margin-top:28px;display:flex;justify-content:center;flex-wrap:wrap;gap:14px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 24px;border-radius:999px;font-weight:800;border:none;cursor:pointer;font-size:15px;box-shadow:0 8px 20px rgba(0,0,0,.18);transition:.25s transform,.25s box-shadow}
+    .btn:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(0,0,0,.22)}
+    .btn-call{background:#1677d2;color:#fff}
+    .btn-wa{background:#25D366;color:#fff}
+    .btn-orange{background:linear-gradient(135deg,#ff8a00,#ff5e00);color:#fff}
 
-    .why-grid{
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:15px;
-    }
+    .trust-strip{margin-top:28px;display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+    .trust-strip span{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.28);backdrop-filter:blur(8px);padding:8px 13px;border-radius:999px;font-size:13px;font-weight:700}
 
-    .why{
-      background:white;
-      padding:22px 14px;
-      border-radius:14px;
-      text-align:center;
-      box-shadow:0 4px 15px rgba(0,0,0,.07);
-    }
+    section{padding:70px 0;position:relative}
+    .section-title{text-align:center;margin-bottom:34px}
+    .section-title h2{color:var(--green);font-size:34px;margin-bottom:8px}
+    .section-title p{color:var(--muted);max-width:760px;margin:auto}
 
-    .why .icon{
-      font-size:34px;
-    }
+    .booking-wrap{margin-top:-70px;position:relative;z-index:6}
+    .booking-card{background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-radius:26px;box-shadow:var(--shadow);padding:34px;border:1px solid rgba(255,255,255,.75)}
+    .booking-card h2{text-align:center;color:var(--green);margin-bottom:8px;font-size:30px}
+    .booking-sub{text-align:center;color:var(--muted);margin-bottom:24px}
+    .form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    .form-group{display:flex;flex-direction:column}
+    .form-group.full{grid-column:1/-1}
+    label{font-weight:800;margin-bottom:7px;color:#344054;font-size:14px}
+    input,select,textarea{width:100%;padding:13px 14px;border:1px solid #d8e1e6;border-radius:12px;font-size:15px;background:#fff;outline:none;transition:.2s}
+    input:focus,select:focus,textarea:focus{border-color:#5bb7ad;box-shadow:0 0 0 4px rgba(0,137,123,.10)}
+    textarea{min-height:95px;resize:vertical}
+    .airport-fields{display:none;grid-column:1/-1;background:#f2fbf9;padding:16px;border-radius:14px;border:1px solid #cde9e4}
+    .airport-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .submit-box{text-align:center;margin-top:22px}
+
+    #services{background:linear-gradient(180deg,#f7fbfa,#edf7f5)}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .card{background:rgba(255,255,255,.96);border-radius:20px;padding:26px;box-shadow:var(--shadow-soft);text-align:center;border:1px solid rgba(0,105,92,.08);transition:.28s transform,.28s box-shadow,.28s border-color;overflow:hidden}
+    .card:hover{transform:translateY(-8px);box-shadow:0 18px 40px rgba(16,24,40,.16);border-color:rgba(0,105,92,.25)}
+    .card .icon{font-size:42px;margin-bottom:10px}
+    .card h3{color:var(--green);margin-bottom:8px;font-size:21px}
+    .card p{color:#596579}
+    .card .card-link{display:inline-block;margin-top:14px;color:var(--orange);font-weight:800}
+
+    .chardham{background:linear-gradient(rgba(255,247,236,.94),rgba(255,247,236,.94)),url('images/yamunotri.jpg') center/cover fixed;scroll-margin-top:90px}
+    .dham-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .dham-card{background:#fff;border-radius:18px;padding:12px;text-align:center;border-top:4px solid var(--orange);box-shadow:var(--shadow-soft);transition:.25s transform}
+    .dham-card:hover{transform:translateY(-6px)}
+    .dham-image{width:100%;height:210px;object-fit:cover;border-radius:14px;margin-bottom:14px;display:block}
+    .dham-card h3{color:#e65100;font-size:20px}
+
+    .airport-section{background:linear-gradient(135deg,#eaf7ff,#effbf8);scroll-margin-top:90px}
+    .airport-box{display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:34px}
+    .airport-visual{min-height:300px;border-radius:24px;background:linear-gradient(rgba(0,80,90,.18),rgba(0,80,90,.18)),url('images/gangotri.jpg') center/cover;box-shadow:var(--shadow);position:relative;overflow:hidden}
+    .airport-visual:after{content:'✈️  Airport Transfer';position:absolute;left:22px;bottom:20px;background:rgba(255,255,255,.92);color:var(--ink);font-weight:800;padding:10px 14px;border-radius:12px}
+
+    #fleet{background:linear-gradient(180deg,#fff,#f4f9fb);scroll-margin-top:90px}
+    .fleet-banner{width:100%;max-width:1180px;margin:0 auto 10px}
+    .fleet-banner img{width:100%;height:auto;display:block;border-radius:22px;box-shadow:var(--shadow)}
+
+    .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .why{background:#fff;padding:24px 14px;border-radius:18px;text-align:center;box-shadow:var(--shadow-soft);border:1px solid rgba(0,105,92,.08)}
+    .why .icon{font-size:36px;margin-bottom:6px}
+    .why h3{color:var(--ink)}
 
     .service-area{
-      background:#00695c;
       color:white;
+      background:
+        linear-gradient(rgba(0,85,78,.88),rgba(0,64,77,.90)),
+        url('images/gangotri.jpg') center/cover no-repeat;
     }
+    .area-list{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-top:20px}
+    .area{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.20);padding:9px 14px;border-radius:999px;backdrop-filter:blur(7px)}
+    .coverage-map{margin-top:28px;border-radius:20px;overflow:hidden;box-shadow:0 18px 40px rgba(0,0,0,.25);background:white}
+    .coverage-map iframe{width:100%;height:380px;display:block;border:0}
 
-    .area-list{
-      display:flex;
-      justify-content:center;
-      flex-wrap:wrap;
-      gap:10px;
-      margin-top:20px;
-    }
+    #about{background:linear-gradient(180deg,#f7fbfa,#fff);scroll-margin-top:90px}
+    .about-contact{display:grid;grid-template-columns:1fr 1fr;gap:25px}
+    .info-box{background:white;border-radius:20px;padding:28px;box-shadow:var(--shadow-soft);border:1px solid rgba(0,105,92,.08)}
+    .info-box h3{color:var(--green);margin-bottom:10px;font-size:22px}
 
-    .area{
-      background:rgba(255,255,255,.14);
-      padding:9px 14px;
-      border-radius:20px;
-    }
-.coverage-map{
-  margin-top:25px;
-  border-radius:16px;
-  overflow:hidden;
-  box-shadow:0 4px 18px rgba(0,0,0,.18);
-  background:white;
-}
-
-.coverage-map iframe{
-  width:100%;
-  height:350px;
-  display:block;
-  border:0;
-}
-    .about-contact{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:25px;
-    }
-
-    .info-box{
-      background:white;
-      border-radius:16px;
-      padding:25px;
-      box-shadow:0 4px 16px rgba(0,0,0,.07);
-    }
-
-    .info-box h3{
-      color:#00695c;
-      margin-bottom:10px;
-    }
-
-    .policies{
-      background:#f1f5f4;
-    }
-
-    details{
-      background:white;
-      border-radius:12px;
-      padding:15px 18px;
-      margin-bottom:12px;
-      box-shadow:0 3px 10px rgba(0,0,0,.05);
-    }
-
-    summary{
-      font-weight:bold;
-      color:#00695c;
-      cursor:pointer;
-    }
-
-    details p{
-      margin-top:10px;
-      color:#555;
-    }
+    .policies{background:#edf4f3;scroll-margin-top:90px}
+    details{background:white;border-radius:14px;padding:16px 20px;margin-bottom:12px;box-shadow:0 4px 14px rgba(0,0,0,.05)}
+    summary{font-weight:800;color:var(--green);cursor:pointer}
+    details p{margin-top:10px;color:#555}
 
     footer{
-      background:#17202a;
-      color:#ddd;
-      text-align:center;
-      padding:25px 15px 90px;
+      background:
+        linear-gradient(rgba(18,32,47,.96),rgba(18,32,47,.98)),
+        url('images/badrinath.jpg') center/cover;
+      color:#ddd;text-align:center;padding:34px 15px 120px;
     }
+    .footer-links{margin-top:12px}
+    .footer-links a{color:#ffb26b;margin:0 8px;font-weight:700}
 
-    .footer-links{
-      margin-top:10px;
-    }
-
-    .footer-links a{
-      color:#ffb26b;
-      margin:0 8px;
-    }
-
-    .sticky-actions{
-    position:fixed;
-    bottom:20px;
-    left:50%;
-    transform:translateX(-50%);
-    z-index:9999;
-    display:flex;
-    gap:6px;
-    background:rgba(255,255,255,.94);
-    padding:5px;
-    border-radius:28px;
-    box-shadow:0 4px 14px rgba(0,0,0,.18);
-}
-
-    .sticky-actions a{
-    padding:9px 14px;
-    border-radius:22px;
-    color:white;
-    font-weight:bold;
-    font-size:14px;
-    white-space:nowrap;
-}
-    .sticky-call{
-      background:#1565c0;
-    }
-
-    .sticky-wa{
-      background:#25D366;
-    }
+    .sticky-actions{position:fixed;bottom:max(12px,env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);z-index:9999;display:flex;gap:6px;background:rgba(255,255,255,.94);padding:5px;border-radius:28px;box-shadow:0 4px 14px rgba(0,0,0,.18)}
+    .sticky-actions a{padding:9px 14px;border-radius:22px;color:white;font-weight:bold;font-size:14px;white-space:nowrap}
+    .sticky-call{background:#1565c0}.sticky-wa{background:#25D366}
 
     @media(max-width:900px){
-      nav{
-        display:none;
-      }
-
-      .grid{
-        grid-template-columns:repeat(2,1fr);
-      }
-
-      .fleet-grid{
-        grid-template-columns:repeat(2,1fr);
-      }
-
-      .why-grid{
-        grid-template-columns:repeat(2,1fr);
-      }
-
-      .dham-grid{
-        grid-template-columns:repeat(2,1fr);
-      }
-
-      .airport-box,
-      .about-contact{
-        grid-template-columns:1fr;
-      }
-
-      .airport-grid{
-        grid-template-columns:1fr;
-      }
+      nav{display:none}
+      .grid{grid-template-columns:repeat(2,1fr)}
+      .why-grid{grid-template-columns:repeat(2,1fr)}
+      .dham-grid{grid-template-columns:repeat(2,1fr)}
+      .airport-box,.about-contact{grid-template-columns:1fr}
+      .airport-grid{grid-template-columns:1fr}
+      .hero{min-height:520px}
+      .hero h2{font-size:46px}
     }
 
     @media(max-width:650px){
-      .hero{
-        padding:65px 18px;
-      }
-
-      .hero h2{
-        font-size:31px;
-      }
-
-      .form-grid,
-      .grid,
-      .fleet-grid,
-      .why-grid,
-      .dham-grid{
-        grid-template-columns:1fr;
-      }
-
-      .brand-text h1{
-        font-size:18px;
-      }
-
-      .logo-box{
-    width:60px;
-    height:60px;
-    flex-shrink:0;
-    overflow:hidden;
-    border-radius:12px;
-    background:white;
-}
-
-.logo-box img{
-    width:100%;
-    height:100%;
-    object-fit:contain;
-    display:block;
-}
-      section{
-        padding:45px 0;
-      }
+      .container{padding:0 16px}
+      .hero{min-height:500px;padding:70px 0 90px;background-position:62% center}
+      .hero h2{font-size:36px}
+      .hero p{font-size:17px}
+      .form-grid,.grid,.why-grid,.dham-grid{grid-template-columns:1fr}
+      .brand-text h1{font-size:20px}
+      .logo-box{width:64px;height:64px}
+      section{padding:52px 0}
+      .booking-wrap{margin-top:-50px}
+      .booking-card{padding:22px 18px}
+      .section-title h2{font-size:30px}
+      .dham-image{height:240px}
+      .coverage-map iframe{height:340px}
+      .sticky-actions a{padding:10px 16px;font-size:15px}
     }
   </style>
 </head>
@@ -640,6 +262,13 @@
       </a>
     </div>
 
+    <div class="trust-strip">
+      <span>✅ Safe & Reliable</span>
+      <span>👨‍✈️ Experienced Drivers</span>
+      <span>💰 Clear Pricing</span>
+      <span>📱 Easy Booking Support</span>
+    </div>
+
   </div>
 
 </section>
@@ -650,6 +279,7 @@
   <div class="booking-card">
 
     <h2>Quick Booking Enquiry</h2>
+    <p class="booking-sub">Plan your journey in just a few clicks</p>
 
     <form id="bookingForm">
 
@@ -768,59 +398,47 @@
 
     <div class="grid">
 
-      <div class="card" onclick="location.href='#chardham'" style="cursor:pointer;">
+      <a class="card" href="#chardham">
         <div class="icon">🛕</div>
         <h3>Char Dham Yatra</h3>
-        <p>
-          Taxi and travel assistance for Yamunotri,
-          Gangotri, Kedarnath and Badrinath.
-        </p>
-      </div>
+        <p>Taxi and travel assistance for Yamunotri, Gangotri, Kedarnath and Badrinath.</p>
+        <span class="card-link">Explore Char Dham →</span>
+      </a>
 
-      <div class="card">
+      <a class="card" href="#booking" onclick="selectTripType('One Way')">
         <div class="icon">🚕</div>
         <h3>Taxi Booking</h3>
-        <p>
-          One-way and round-trip taxi booking
-          for local and intercity travel.
-        </p>
-      </div>
+        <p>One-way and round-trip taxi booking for local and intercity travel.</p>
+        <span class="card-link">Book Taxi →</span>
+      </a>
 
-      <div class="card">
+      <a class="card" href="#airport" onclick="selectTripType('Airport Pickup')">
         <div class="icon">✈️</div>
         <h3>Airport Transfer</h3>
-        <p>
-          Convenient airport pickup and drop
-          including Delhi Airport routes.
-        </p>
-      </div>
+        <p>Convenient airport pickup and drop including Delhi Airport routes.</p>
+        <span class="card-link">Book Airport →</span>
+      </a>
 
-      <div class="card">
+      <a class="card" href="#booking" onclick="selectTripType('One Way')">
         <div class="icon">🛣️</div>
         <h3>Outstation Taxi</h3>
-        <p>
-          Comfortable city-to-city travel across
-          Uttarakhand, North India and beyond.
-        </p>
-      </div>
+        <p>Comfortable city-to-city travel across Uttarakhand, North India and beyond.</p>
+        <span class="card-link">Plan Trip →</span>
+      </a>
 
-      <div class="card">
+      <a class="card" href="#booking" onclick="selectTripType('Tour Package')">
         <div class="icon">🏔️</div>
         <h3>Tour Packages</h3>
-        <p>
-          Customized pilgrimage and holiday
-          travel packages.
-        </p>
-      </div>
+        <p>Customized pilgrimage and holiday travel packages.</p>
+        <span class="card-link">View Packages →</span>
+      </a>
 
-      <div class="card">
+      <a class="card" href="#booking">
         <div class="icon">🏨</div>
         <h3>Hotel Assistance</h3>
-        <p>
-          Hotel booking assistance for selected
-          travel destinations.
-        </p>
-      </div>
+        <p>Hotel booking assistance for selected travel destinations.</p>
+        <span class="card-link">Ask for Hotels →</span>
+      </a>
 
     </div>
 
@@ -885,7 +503,7 @@
 </section>
 
 
-<section class="airport-section">
+<section class="airport-section" id="airport">
 
   <div class="container airport-box">
 
@@ -909,9 +527,7 @@
 
     </div>
 
-    <div class="airport-visual">
-      ✈️ 🚕
-    </div>
+    <div class="airport-visual" aria-label="Scenic airport transfer travel visual"></div>
 
   </div>
 
@@ -1271,6 +887,14 @@
 
 
 <script>
+
+function selectTripType(value){
+  const tripType = document.getElementById("tripType");
+  if(tripType){
+    tripType.value = value;
+    toggleAirportFields();
+  }
+}
 
 function toggleAirportFields(){
 
